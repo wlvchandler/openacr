@@ -253,6 +253,7 @@ struct FCitest { // atf_ci.FCitest
     algo::Smallstr50           citest;            // Primary key
     algo::Smallstr50           cijob;             //   "test"  CI job in which this test runs
     bool                       sandbox;           //   false  Run test in sandbox
+    bool                       skip;              //   false  Bypass test
     algo::Comment              comment;           //
     i32                        nerr;              //   0
     atf_ci::citest_step_hook   step;              //   NULL  Pointer to a function

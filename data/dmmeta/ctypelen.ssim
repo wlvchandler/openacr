@@ -663,7 +663,7 @@ dmmeta.ctypelen  ctype:atf_amc.VarlenMsg  len:4  alignment:1  padbytes:0  plaind
 dmmeta.ctypelen  ctype:atf_ci.FBuilddir  len:216  alignment:8  padbytes:4  plaindata:N
 dmmeta.ctypelen  ctype:atf_ci.FCfg  len:211  alignment:1  padbytes:0  plaindata:Y
 dmmeta.ctypelen  ctype:atf_ci.FCipackage  len:308  alignment:1  padbytes:0  plaindata:Y
-dmmeta.ctypelen  ctype:atf_ci.FCitest  len:280  alignment:8  padbytes:3  plaindata:N
+dmmeta.ctypelen  ctype:atf_ci.FCitest  len:280  alignment:8  padbytes:2  plaindata:N
 dmmeta.ctypelen  ctype:atf_ci.FDb  len:3768  alignment:8  padbytes:58  plaindata:N
 dmmeta.ctypelen  ctype:atf_ci.FGitfile  len:240  alignment:8  padbytes:6  plaindata:N
 dmmeta.ctypelen  ctype:atf_ci.FMsgfile  len:355  alignment:1  padbytes:0  plaindata:Y
@@ -712,7 +712,7 @@ dmmeta.ctypelen  ctype:atf_unit.TypeB  len:8  alignment:4  padbytes:0  plaindata
 dmmeta.ctypelen  ctype:atfdb.Amctest  len:204  alignment:1  padbytes:0  plaindata:Y
 dmmeta.ctypelen  ctype:atfdb.Cijob  len:204  alignment:1  padbytes:0  plaindata:Y
 dmmeta.ctypelen  ctype:atfdb.Cipackage  len:308  alignment:1  padbytes:0  plaindata:Y
-dmmeta.ctypelen  ctype:atfdb.Citest  len:257  alignment:1  padbytes:0  plaindata:Y
+dmmeta.ctypelen  ctype:atfdb.Citest  len:258  alignment:1  padbytes:0  plaindata:Y
 dmmeta.ctypelen  ctype:atfdb.Comptest  len:212  alignment:4  padbytes:2  plaindata:Y
 dmmeta.ctypelen  ctype:atfdb.Fuzzstrat  len:204  alignment:1  padbytes:0  plaindata:Y
 dmmeta.ctypelen  ctype:atfdb.Msgdir  len:204  alignment:1  padbytes:0  plaindata:Y

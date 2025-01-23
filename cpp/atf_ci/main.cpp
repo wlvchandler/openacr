@@ -313,6 +313,12 @@ void atf_ci::citest_readme() {
 
 // -----------------------------------------------------------------------------
 
+static bool RunTestQ(atf_ci::FCitest& citest) {
+    return (Regx_Match(atf_ci::_db.cmdline.citest, citest.citest)
+    && Regx_Match(atf_ci::_db.cmdline.cijob, citest.cijob)
+    && !citest.skip);
+}
+
 void atf_ci::Main() {
     algo_lib::DieWithParent();
 
@@ -320,18 +326,20 @@ void atf_ci::Main() {
 
     int n_run  = 0;
     int n_pass = 0;
+    int n_skipped = 0;
     ind_beg(atf_ci::_db_citest_curs,citest,atf_ci::_db) {
-        if (Regx_Match(atf_ci::_db.cmdline.citest, citest.citest)
-            && Regx_Match(atf_ci::_db.cmdline.cijob, citest.cijob)) {
+        if (RunTestQ(citest)) {
             ++n_run;
             n_pass += RunCiTest(citest);
             if (n_run-n_pass > _db.cmdline.maxerr) {
                 break;
             }
+        } else {
+            n_skipped++;
         }
     }ind_end;
 
-    if (n_run==0) {
+    if (n_run==0 && n_skipped==0) {
         algo_lib::_db.exit_code=1;
         prlog("atf_ci.nomatch"
               <<Keyval("citest",atf_ci::_db.cmdline.citest)

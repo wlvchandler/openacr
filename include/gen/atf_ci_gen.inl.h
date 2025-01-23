@@ -75,6 +75,7 @@ inline void atf_ci::step_Call(atf_ci::FCitest& citest) {
 inline void atf_ci::FCitest_Init(atf_ci::FCitest& citest) {
     citest.cijob = algo::strptr("test");
     citest.sandbox = bool(false);
+    citest.skip = bool(false);
     citest.nerr = i32(0);
     citest.step = NULL;
     citest.ind_citest_next = (atf_ci::FCitest*)-1; // (atf_ci.FDb.ind_citest) not-in-hash

@@ -505,6 +505,7 @@ void abt_md::Main() {
     Main_XrefNs();
 
     // select md files by regex or by namespace
+    int nselect = 0;
     ind_beg(_db_readme_curs,readme,_db) {
         readme.select = _db.cmdline.ns.expr != ""
             ? (readme.p_ns && Regx_Match(_db.cmdline.ns,readme.p_ns->ns))
@@ -512,6 +513,7 @@ void abt_md::Main() {
 
         if (readme.select) {
             verblog("abt_md: select "<<readme.gitfile);
+            nselect++;
         }
     }ind_end;
 
@@ -519,12 +521,6 @@ void abt_md::Main() {
         if (abt_md::FField *field=c_field_Find(ctype,0)) {
             field->ispkey=true;
         }
-    }ind_end;
-
-    // count number of selected md files
-    int nselect=0;
-    ind_beg(_db_readme_curs,readme,_db) {
-        nselect += readme.select;
     }ind_end;
 
     // process selected readmes

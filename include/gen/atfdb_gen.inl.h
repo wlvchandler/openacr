@@ -51,6 +51,7 @@ inline  atfdb::Cipackage::Cipackage() {
 inline void atfdb::Citest_Init(atfdb::Citest& parent) {
     parent.cijob = algo::strptr("test");
     parent.sandbox = bool(false);
+    parent.skip = bool(false);
 }
 
 // --- atfdb.Citest..Ctor

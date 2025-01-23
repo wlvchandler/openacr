@@ -2638,6 +2638,7 @@ dmmeta.field  field:atfdb.Cipackage.comment  arg:algo.Comment  reftype:Val  dflt
 dmmeta.field  field:atfdb.Citest.citest  arg:algo.Smallstr50  reftype:Val  dflt:""  comment:"Primary key"
 dmmeta.field  field:atfdb.Citest.cijob  arg:atfdb.Cijob  reftype:Pkey  dflt:'"test"'  comment:"CI job in which this test runs"
 dmmeta.field  field:atfdb.Citest.sandbox  arg:bool  reftype:Val  dflt:""  comment:"Run test in sandbox"
+dmmeta.field  field:atfdb.Citest.skip  arg:bool  reftype:Val  dflt:""  comment:"Bypass test"
 dmmeta.field  field:atfdb.Citest.comment  arg:algo.Comment  reftype:Val  dflt:""  comment:""
 dmmeta.field  field:atfdb.Comptest.comptest  arg:algo.Smallstr50  reftype:Val  dflt:""  comment:""
 dmmeta.field  field:atfdb.Comptest.target  arg:dmmeta.Ns  reftype:Pkey  dflt:""  comment:""

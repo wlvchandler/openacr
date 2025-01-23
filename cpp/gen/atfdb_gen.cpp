@@ -220,6 +220,10 @@ bool atfdb::Citest_ReadFieldMaybe(atfdb::Citest& parent, algo::strptr field, alg
             retval = bool_ReadStrptrMaybe(parent.sandbox, strval);
             break;
         }
+        case atfdb_FieldId_skip: {
+            retval = bool_ReadStrptrMaybe(parent.skip, strval);
+            break;
+        }
         case atfdb_FieldId_comment: {
             retval = algo::Comment_ReadStrptrMaybe(parent.comment, strval);
             break;
@@ -259,6 +263,9 @@ void atfdb::Citest_Print(atfdb::Citest& row, algo::cstring& str) {
 
     bool_Print(row.sandbox, temp);
     PrintAttrSpaceReset(str,"sandbox", temp);
+
+    bool_Print(row.skip, temp);
+    PrintAttrSpaceReset(str,"skip", temp);
 
     algo::Comment_Print(row.comment, temp);
     PrintAttrSpaceReset(str,"comment", temp);
@@ -385,6 +392,7 @@ const char* atfdb::value_ToCstr(const atfdb::FieldId& parent) {
         case atfdb_FieldId_reinstall       : ret = "reinstall";  break;
         case atfdb_FieldId_citest          : ret = "citest";  break;
         case atfdb_FieldId_sandbox         : ret = "sandbox";  break;
+        case atfdb_FieldId_skip            : ret = "skip";  break;
         case atfdb_FieldId_comptest        : ret = "comptest";  break;
         case atfdb_FieldId_target          : ret = "target";  break;
         case atfdb_FieldId_testname        : ret = "testname";  break;
@@ -446,6 +454,9 @@ bool atfdb::value_SetStrptrMaybe(atfdb::FieldId& parent, algo::strptr rhs) {
                 }
                 case LE_STR4('r','a','n','k'): {
                     value_SetEnum(parent,atfdb_FieldId_rank); ret = true; break;
+                }
+                case LE_STR4('s','k','i','p'): {
+                    value_SetEnum(parent,atfdb_FieldId_skip); ret = true; break;
                 }
                 case LE_STR4('t','m','s','g'): {
                     value_SetEnum(parent,atfdb_FieldId_tmsg); ret = true; break;
