@@ -1,5 +1,6 @@
 dev.gitfile  gitfile:.ffroot
 dev.gitfile  gitfile:.gitattributes
+dev.gitfile  gitfile:.github/actions/setup-deps/action.yml
 dev.gitfile  gitfile:.github/workflows/main.yml
 dev.gitfile  gitfile:.gitignore
 dev.gitfile  gitfile:.gitlab-ci.yml
@@ -695,10 +696,10 @@ dev.gitfile  gitfile:data/gclidb/project.ssim
 dev.gitfile  gitfile:data/gclidb/user.ssim
 dev.gitfile  gitfile:extern/.empty
 dev.gitfile  gitfile:extern/gclitest/id_rsa_gclisvc
-dev.gitfile  gitfile:extern/sqlite-3470000/shell.c
-dev.gitfile  gitfile:extern/sqlite-3470000/sqlite3.c
-dev.gitfile  gitfile:extern/sqlite-3470000/sqlite3.h
-dev.gitfile  gitfile:extern/sqlite-3470000/sqlite3ext.h
+dev.gitfile  gitfile:extern/sqlite-3500400/shell.c
+dev.gitfile  gitfile:extern/sqlite-3500400/sqlite3.c
+dev.gitfile  gitfile:extern/sqlite-3500400/sqlite3.h
+dev.gitfile  gitfile:extern/sqlite-3500400/sqlite3ext.h
 dev.gitfile  gitfile:include/abt.h
 dev.gitfile  gitfile:include/abt_md.h
 dev.gitfile  gitfile:include/acr.h
@@ -1070,7 +1071,13 @@ dev.gitfile  gitfile:test/atf_comp/acr_ed.CreateSsimfileBadNs
 dev.gitfile  gitfile:test/atf_comp/acr_in.Reverse
 dev.gitfile  gitfile:test/atf_comp/acr_in.Simple
 dev.gitfile  gitfile:test/atf_comp/acr_in.Tree
+dev.gitfile  gitfile:test/atf_comp/aqlite.CompileOptions
+dev.gitfile  gitfile:test/atf_comp/aqlite.Constraints
+dev.gitfile  gitfile:test/atf_comp/aqlite.ErrorHandling
+dev.gitfile  gitfile:test/atf_comp/aqlite.Joins
 dev.gitfile  gitfile:test/atf_comp/aqlite.Number
+dev.gitfile  gitfile:test/atf_comp/aqlite.PatternMatching
+dev.gitfile  gitfile:test/atf_comp/aqlite.Performance
 dev.gitfile  gitfile:test/atf_comp/aqlite.Smoke
 dev.gitfile  gitfile:test/atf_comp/atf_cmdline.Bare
 dev.gitfile  gitfile:test/atf_comp/atf_cmdline.Debug
